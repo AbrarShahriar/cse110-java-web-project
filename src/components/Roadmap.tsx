@@ -19,13 +19,16 @@ export default function Roadmap() {
           dateClassName={styles.timelineDate}
           // icon={<WorkIcon />}
         >
-          <h3
-            className="vertical-timeline-element-title"
-            style={{ marginBottom: "20px", opacity: ".75" }}
+          <h5
+            className="vertical-timeline-element-subtitle"
+            style={{
+              marginBottom: "20px",
+              opacity: ".75",
+            }}
           >
             CSE-110
-          </h3>
-          <h4 className="vertical-timeline-element-subtitle">{data.title}</h4>
+          </h5>
+          <h3 className="vertical-timeline-element-title">{data.title}</h3>
         </VerticalTimelineElement>
       ))}
     </VerticalTimeline>

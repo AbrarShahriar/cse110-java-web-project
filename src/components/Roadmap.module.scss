@@ -9,6 +9,10 @@
     color: #000;
   }
 
+  // .noBoxShadow > *:nth-child(1) {
+  //   // outline: 2px solid red;
+  //   transform: scale(0.5);
+  // }
   .noBoxShadow > *:nth-child(2) {
     box-shadow: none !important;
     border-radius: 10px;
