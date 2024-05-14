@@ -1,4 +1,3 @@
-import React from "react";
 import "./styles/splash.scss";
 import SplashScreen from "./pages/SplashScreen";
 
