@@ -4,6 +4,8 @@ import App from "./App.tsx";
 import "./styles/index.scss";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RoadmapPage from "./pages/RoadmapPage.tsx";
+import LessonPage from "./pages/LessonPage.tsx";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -12,6 +14,10 @@ const router = createBrowserRouter([
   {
     path: "roadmap",
     element: <RoadmapPage />,
+  },
+  {
+    path: "lessons/:lessionId",
+    element: <LessonPage />,
   },
 ]);
 

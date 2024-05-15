@@ -17,3 +17,18 @@ a {
   text-decoration: none;
   color: white;
 }
+
+.my-menu {
+  border: 2px solid green;
+  background-color: $text-color !important;
+}
+
+.my-menuitem {
+  color: darkorange;
+  background-color: red;
+}
+
+.my-menuitem-hover {
+  color: blue;
+  background-color: black;
+}
