@@ -36,7 +36,16 @@ export default function SplashScreen() {
       </div>
       <div className="text">
         <p>{lang.hero_title[selectedLang]}</p>
-        <button onClick={() => navigate("/roadmap")}>
+        <button
+          onClick={() => {
+            ReactGA.event({
+              category: "Navigation",
+              action: "Click",
+              label: "Get Me There",
+            });
+            navigate("/roadmap");
+          }}
+        >
           {lang.hero_getMeThere[selectedLang]}
         </button>
       </div>

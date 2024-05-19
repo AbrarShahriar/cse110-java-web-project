@@ -10,6 +10,7 @@ import { ISectionData, useAppStore } from "../store";
 import { slugify } from "../lib/utils";
 import { TbLockOpen2, TbLock } from "react-icons/tb";
 import { useState } from "react";
+import ReactGA from "react-ga4";
 
 export default function Roadmap() {
   const navigate = useNavigate();
@@ -26,10 +27,15 @@ export default function Roadmap() {
           sectionData[i] && (
             <VerticalTimelineElement
               key={i}
-              onTimelineElementClick={() =>
+              onTimelineElementClick={() => {
+                ReactGA.event({
+                  category: "Navigation",
+                  action: "Click",
+                  label: `Interested In: ${data.title.en}`,
+                });
                 !sectionData[i].locked &&
-                navigate(`/lessons/${slugify(data.title[lang])}`)
-              }
+                  navigate(`/lessons/${slugify(data.title[lang])}`);
+              }}
               className={`vertical-timeline-element--work ${styles.noBoxShadow}`}
               contentStyle={{ background: "#000", color: "#fff" }}
               contentArrowStyle={{ borderRight: "7px solid  #000" }}

@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./RoadmapPage.module.scss";
 import { translations as lang } from "../lang";
 import { useAppStore } from "../store";
 import headerWave from "../assets/images/roadmap-wave.svg";
 import Roadmap from "../components/Roadmap";
 import { useNavigate } from "react-router-dom";
+import ReactGA from "react-ga4";
 
 export default function RoadmapPage() {
   const language = useAppStore((state) => state.selectedLang);
@@ -12,33 +13,41 @@ export default function RoadmapPage() {
 
   const navigate = useNavigate();
 
-  // useEffect(() => {
-  //   console.log("RoadmapPage useEffect");
-
-  //   if (!localStorage.getItem("sections")) {
-  //     console.log("LS item not found: creating LS item");
-
-  //     let localSectionData = translations.roadmapData.map((el, i) => ({
-  //       index: i,
-  //       slug: slugify(el.title.en),
-  //       locked: i == 0 ? false : true,
-  //     }));
-
-  //     localStorage.setItem("sections", JSON.stringify(localSectionData));
-  //     console.log("LS item created");
-  //   }
-  // }, []);
+  useEffect(() => {
+    ReactGA.send({
+      hitType: "pageview",
+      page: "/roadmap",
+      title: "Roadmap",
+    });
+  }, []);
 
   return (
     <div className={styles.roadmap}>
       <header className={styles.header}>
-        <button className={styles.aboutUs} onClick={() => navigate("/about")}>
+        <button
+          className={styles.aboutUs}
+          onClick={() => {
+            ReactGA.event({
+              category: "Navigation",
+              action: "Click",
+              label: "About Us",
+            });
+            navigate("/about");
+          }}
+        >
           About Us
         </button>
         <h1>{lang.roadmap_headerTitle[language]}</h1>
         <div
           className={styles.langSwitch}
-          onClick={() => setLangSwitch(!langSwitch)}
+          onClick={() => {
+            ReactGA.event({
+              category: "Language",
+              action: "Click",
+              label: `Language Switched`,
+            });
+            setLangSwitch(!langSwitch);
+          }}
         >
           <span>EN</span>
           <span>BN</span>

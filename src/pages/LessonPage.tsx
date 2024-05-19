@@ -8,6 +8,7 @@ import { RiMenu4Fill } from "react-icons/ri";
 import { slugify } from "../lib/utils";
 import hljs from "highlight.js/lib/core";
 import java from "highlight.js/lib/languages/java";
+import ReactGA from "react-ga4";
 
 import "highlight.js/styles/atom-one-dark-reasonable.min.css";
 
@@ -30,6 +31,14 @@ const config = {
 };
 
 export default function LessonPage() {
+  useEffect(() => {
+    ReactGA.send({
+      hitType: "pageview",
+      page: "/lessions",
+      title: "Roadmap",
+    });
+  }, []);
+
   const navigate = useNavigate();
   const { lessionId } = useParams();
   const lang = useAppStore((state) => state.selectedLang);
@@ -69,6 +78,14 @@ export default function LessonPage() {
   const [menuActive, setMenuActive] = useState(false);
 
   const [confettiActive, setConfettiActive] = useState(false);
+
+  useEffect(() => {
+    ReactGA.send({
+      hitType: "pageview",
+      page: `/lessons/${lessionId}`,
+      title: topicData.title,
+    });
+  }, []);
 
   useEffect(() => {
     hljs.highlightAll();
