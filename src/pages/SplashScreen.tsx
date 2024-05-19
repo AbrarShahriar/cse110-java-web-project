@@ -3,9 +3,19 @@ import { translations as lang } from "../lang";
 import { useNavigate } from "react-router-dom";
 
 import ReactGA from "react-ga4";
+import { useEffect } from "react";
 
 export default function SplashScreen() {
   ReactGA.initialize("G-0NP7RD2JL8");
+
+  useEffect(() => {
+    ReactGA.send({
+      hitType: "pageview",
+      page: "/",
+      title: "Home",
+    });
+  }, []);
+
   const selectedLang = useAppStore((state) => state.selectedLang);
   const navigate = useNavigate();
 
