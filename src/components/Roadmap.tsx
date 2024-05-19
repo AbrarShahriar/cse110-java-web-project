@@ -11,10 +11,6 @@ import { slugify } from "../lib/utils";
 import { TbLockOpen2, TbLock } from "react-icons/tb";
 import { useState } from "react";
 
-// const sectionData =
-//   JSON.parse(localStorage.getItem("sections") as string) || [];
-// console.log("LS items: ", sectionData);
-
 export default function Roadmap() {
   const navigate = useNavigate();
   const lang = useAppStore((state) => state.selectedLang);
@@ -22,8 +18,6 @@ export default function Roadmap() {
   const [sectionData] = useState<ISectionData[]>(
     JSON.parse(localStorage.getItem("sections") as string) || []
   );
-
-  // console.log(translations.roadmapData.map((_, i) => sectionData[i]));
 
   return (
     <VerticalTimeline lineColor="#000" className={styles.timeline}>

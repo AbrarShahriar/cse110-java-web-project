@@ -6,6 +6,24 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RoadmapPage from "./pages/RoadmapPage.tsx";
 import LessonPage from "./pages/LessonPage.tsx";
 import AboutPage from "./pages/AboutPage.tsx";
+import { translations } from "./lang.ts";
+import { slugify } from "./lib/utils.ts";
+import ReactGA from "react-ga4";
+
+ReactGA.initialize(import.meta.env.TRACKER_ID);
+
+if (!localStorage.getItem("sections")) {
+  console.log("LS item not found: creating LS item");
+
+  let localSectionData = translations.roadmapData.map((el, i) => ({
+    index: i,
+    slug: slugify(el.title.en),
+    locked: i == 0 ? false : true,
+  }));
+
+  localStorage.setItem("sections", JSON.stringify(localSectionData));
+  console.log("LS item created");
+}
 
 const router = createBrowserRouter([
   {

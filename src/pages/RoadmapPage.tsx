@@ -13,22 +13,22 @@ export default function RoadmapPage() {
 
   const navigate = useNavigate();
 
-  useEffect(() => {
-    console.log("RoadmapPage useEffect");
+  // useEffect(() => {
+  //   console.log("RoadmapPage useEffect");
 
-    if (!localStorage.getItem("sections")) {
-      console.log("LS item not found: creating LS item");
+  //   if (!localStorage.getItem("sections")) {
+  //     console.log("LS item not found: creating LS item");
 
-      let localSectionData = translations.roadmapData.map((el, i) => ({
-        index: i,
-        slug: slugify(el.title.en),
-        locked: i == 0 ? false : true,
-      }));
+  //     let localSectionData = translations.roadmapData.map((el, i) => ({
+  //       index: i,
+  //       slug: slugify(el.title.en),
+  //       locked: i == 0 ? false : true,
+  //     }));
 
-      localStorage.setItem("sections", JSON.stringify(localSectionData));
-      console.log("LS item created");
-    }
-  }, []);
+  //     localStorage.setItem("sections", JSON.stringify(localSectionData));
+  //     console.log("LS item created");
+  //   }
+  // }, []);
 
   return (
     <div className={styles.roadmap}>

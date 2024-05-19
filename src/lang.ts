@@ -325,147 +325,186 @@ export const translations: ITranslations = {
           </ol>`,
         },
         {
-          en: `<h1 style="text-align: center; font-family: 'Block Berthold', sans-serif;">Writing Java Programs</h1>
-
-        <div style="text-align: center;">
-            <img src="https://i.postimg.cc/gjHn9jq7/59aabbf5-5787-4316-8c63-b9fe5c3dbb19.jpg
-        " alt="Untitled Diagram" style="border-radius: 20px; border: 2px solid black; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);">
-        </div> 
-        
-        <h1>
-        
-        Time to play with Java
-        
-        </h1>
-        <div style="display: flex; align-items: center;">
-            <div style="flex: 1;">
-                <h2 style="font-family: 'Block Berthold', sans-serif; ">Let's Write our first ever Java program</h2>
-                <p style="font-weight: 500;">This program will print out "Hello Classmates"
-                </p>
-                <p>Without thinking too much just memorize the highlighted portion. You will be able to understand by the end of this course.
-                </p>
-            </div>
-           <pre><code class="language-Java"> 
-    public class first_program {
-      public static void main (String [] args){
-        System.out.print("Hello Classmates");
-      }
-    }
-         </code>
-         </pre>
-        </div>`,
-          bn: "",
-        },
-        {
-          bn: "",
           en: `<div>
-      <style>
-      h1 {
-          text-align: center;
-          font-family:'Block Berthold',sans-serif;
-      }
-
-      .test {
-        display: flex; 
-        align-items: center; 
-        justify-content: center;
-      }
-      .test2 {
-          flex: 1; margin-right: auto;
-      }
-          @media only screen and (max-width: 600px) {
-              .test {
-                  flex-direction: column;
-          }
-      }
-      </style>
-<h1>What is a Visual Map/Flowchart 
-      </h1>
-      <div style="text-align: center;">
-          <img src="https://i.postimg.cc/BQFXvvjP/flawchart.png
-
-      " alt="Untitled Diagram" style="border-radius: 20px; border: 2px solid black; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); height:100px width:200px">
-      </div>
-      <h3> Here are some shapes of a flowchart on top </h3>
-      <h3>A visual diagram showing how a program works, using shapes, symbols, and arrows to illustrate the order of events.</h3>
-      <div class='test' >
-          <div class="test2">
-              <h1>Let's Examine A Flowchart</h1>
-              <p>Let’s go back to the previously discussed scenario and try to visualize it using a flowchart.</p>
-              <p>Example: Try to think of a program that takes two numbers from the user then calculates and shows their product in the output. Represent this program using a flowchart.</p>
-          </div>
-          <div style="flex: 1;">
-              <img src="https://i.postimg.cc/HsmfJpzP/flaw-product-drawio.png
-
-      " style="border-radius: 10px;">
-          </div>
-      </div>
-      <p>&nbsp;</p>
-      <div class='test' style="display: flex; align-items: center;">
-          <div style="flex: 1;">
-              <h1 style="font-family: 'Block Berthold', sans-serif;">Continued Scenario to flowchart 1</h1>
-              <p>Assignment #1:</p>
-              <p>Task: Imagine a program that figures out and displays the area of a rectangle after getting the measurements of its two sides as input. Create a visual chart illustrating how this program works.</p>
-          </div>
-          <div style="flex: 1;">
-              <img src="https://i.postimg.cc/sgQ9SvG5/area-Flowchart-drawio.png
-
-      " style="border-radius: 10px;">
-          </div>
-      </div>
-      <p>&nbsp;</p>
-      <div class='test' style="display: flex; align-items: center;">
-          <div style="flex: 1;">
-              <h1 style="font-family: 'Block Berthold', sans-serif;">Continued Scenario to flowchart 2</h1>
-              <p>Assignment #2:</p>
-              <p>Task: Imagine a program that computes and displays the speed of a car in meters per second after receiving the speed in kilometers per hour from the user as input. Create a visual chart illustrating how this program operates.</p>
-          </div>
-          <div style="flex: 1;">
-              <img src="https://i.postimg.cc/tJPdFZdZ/carspeed-drawio.png
-
-      " style="border-radius: 10px;">
-          </div>
-      </div>
-      <p>&nbsp;</p>
-      <div class='test' style="display: flex; align-items: center;">
-          <div style="flex: 1;">
-              <h1 style="font-family: 'Block Berthold', sans-serif;">Continued Scenario to flowchart 3</h1>
-              <p>Assignment #3:</p>
-              <p>Task: Picture a scenario where a rectangle can perfectly enclose two circles, each with a radius of R, with each circle touching three different sides of the rectangle. Given the radius value as input, calculate and display the area inside the rectangle that is not occupied by the circles. Create a visual chart illustrating the steps of this program.</p>
-          </div>
-          <div style="flex: 1;">
-              <img src="https://i.postimg.cc/dtYrz0m6/circle-Square-drawio.png
-
-      " style="border-radius: 10px;">
-          </div>
-      </div>
-      <p>&nbsp;</p>
-      <div class='test' style="display: flex; align-items: center;">
-          <div style="flex: 1;">
-              <h1 style="font-family: 'Block Berthold', sans-serif;">Continued Scenario to flowchart 4</h1>
-              <p>In the earlier slides, we looked at a sequential program flow example. But in many cases, program flows aren't sequential. In those instances, we use a diamond shape to determine where the program flow will go next.</p>
-          </div>
-          <div style="flex: 1;">
-              <img src="https://i.postimg.cc/X7vtRct3/diamond-Description-And-Shape-drawio.png
-
-      " style="border-radius: 10px;">
-          </div>
-      </div>
-      <p>&nbsp;</p>
-      <div class='test' style="display: flex; align-items: center;">
-          <div style="flex: 1;">
-              <h1 style="font-family: 'Block Berthold', sans-serif;">Continued Scenario to flowchart 5</h1>
-              <p>
-      Let's explore a non-sequential program flow example.
-      Scenario: Imagine a program that receives two numbers from the user and displays the larger number as output. Create a visual chart illustrating how this program operates.</p>
-          </div>
-          <div style="flex: 1;">
-              <img src="https://i.postimg.cc/MZ4rR1wT/largest-Number-drawio.png
-
-      " style="border-radius: 10px;">
-          </div>
-      </div>
-</div>`,
+          <style>
+       h1 {
+           text-align: center;
+           font-family:'Block Berthold',sans-serif;
+       }
+ .test {
+         display: flex; 
+         align-items: center; 
+         justify-content: center;
+       }
+       .test2 {
+           flex: 1; margin-right: auto;
+       }
+       .flex_one{
+         flex: 1;
+       }
+           @media only screen and (max-width: 600px) {
+               .test {
+                   flex-direction: column;
+           }
+       }
+ </style>
+ <h1>   Writing Java Programs
+           </h1>
+           <div style="text-align: center;">
+               <img src="https://i.postimg.cc/gjHn9jq7/59aabbf5-5787-4316-8c63-b9fe5c3dbb19.jpg
+ 
+           " alt="Untitled Diagram" style="border-radius: 20px; border: 2px solid black; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); height:100px width:200px">
+           </div>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <div class='test' >
+               <div class="test2">
+                   <h1>Let's Write our first ever Java program</h1>
+                    <div class="flex_one">
+         <p>This program will print out "Hello Classmates"
+         </p>
+         <br>
+         <p>Without thinking too much just memorize the highlighted portion. You will be able to understand by the end of this course.
+         </p>
+         <br>
+         <p>Keep in mind, you Class name has to be the same as the file name.
+ In this example, first_program is our class name.
+         </p>
+     </div>
+               </div>
+               <div class="flex_one">
+                    <pre><code class="language-Java"> 
+    public class first_program {
+ 
+         public static void main (String [] args){
+             System.out.print(“Hello Classmates);
+         }
+     }
+  </code>
+  </pre>
+               </div>
+           </div>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <div class='test'>
+               <div class="flex_one">
+                   <h1>Let's Discuss Printing in Java</h1>
+                  <p>Java uses three different approaches to show the output in the console.
+         </p>
+               </div>
+               <div class="flex_one">
+                   <img src="https://i.postimg.cc/RFvRsmmF/Print-Java-drawio.png
+ 
+           " style="border-radius: 10px;">
+               </div>
+           </div>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <div class='test'>
+               <div class="flex_one">
+                   <h1>Here are some examples:</h1>
+               </div>
+               <div class="flex_one">
+                     <pre><code class="language-Java"> 
+  public class print_examples{   
+      public static void main(String[] args)  { 
+        float x = 1.65f;
+        System.out.println("Hello ClassMate s"); 
+        System.out.print("number: " +  32);
+        System.out.printf("formatted x = %.4f\n", y);
+        }   
+ }
+ 
+  </code>
+  </pre>
+               </div>
+           </div>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <div class='test'>
+               <div class="flex_one">
+                   <h1>Java Comments</h1>
+                  <ul>
+                  <li>Comments help make the code easier to read and understand.</li>
+                  <li>The Java compiler ignores the commented sections of code.</li>
+                  <li>Single-line comments: Begin with two forward slashes (//).</li>
+                  <li>Multi-line comments: Start with /* and end with */.</li>
+                  </ul>
+               </div>
+               <div class="flex_one">
+                    <pre><code class="language-Java"> 
+ public class Comments {   
+     public static void main(String[] args)  { 
+         // This is a single-line comment example
+         System.out.println("Comments in Java");
+         /* 
+             This is a multi-line comment example
+         */
+         System.out.println("Program ends!");
+     }   
+ }
+ 
+  </code>
+  </pre>
+               </div>
+           </div>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <div class='test'>
+               <div style="flex: 1;">
+                   <h1 style="font-family: 'Block Berthold', sans-serif;">Keywords in Java</h1>
+                   <p>Java Keywords are special reserved words with predefined meanings that cannot be used as variable names. Let's learn about a few of them.</p>
+                   <ol>
+                   <li><strong>Public:</strong> This is an access modifier keyword. It indicates that the class or method is accessible from any other classes. Private and Protected are other types of access modifiers.</li>
+                   <li><strong>Class:</strong> This keyword is used to specify the class name. In our example, class FirstProgram means that FirstProgram is the name of the class. </li>
+                   <li><strong>Void:</strong> This keyword indicates that nothing will be returned from the method. We'll cover this in more detail in later lectures. </li>
+                   <li> <strong>Static:</strong> This keyword signifies that the method can be called without creating an instance of the class. We'll delve into this further in the upcoming lectures, and it'll become clearer then.</li>
+                   </ol>
+               </div>
+               <div class="flex_one">
+                    <pre><code class="language-Java"> 
+ public class first_program   {
+   public static void main (String[] args){
+     System.out.print(“Hello ClassMates"); 
+   }
+ }
+ 
+ 
+  </code>
+  </pre>
+               </div>
+           </div>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <div class='test'>
+               <div style="flex: 1;">
+                   <h1>Scopes in Java</h1>
+                   <p>
+           In Java, scopes determine the visibility and lifespan of variables, methods, and classes. These scopes are primarily delineated using { } (Curly Braces).</p>
+           <br>
+                   <p>As illustrated in the example, after declaring the class name "FirstProgram" in line 1, "{" was used. This indicated that everything below was within the Class Scope until the bracket was closed in line 5 using "}".
+         </p>
+               </div>
+               <div class="flex_one">
+                   <pre><code class="language-Java"> 
+ public class first_program {
+   public static void main (String[] args) {
+     System.out.print(“Hello ClassMates");
+   }
+ }
+ 
+ 
+  </code>
+  </pre>
+               </div>
+           </div>
+ </div>`,
+          bn: "",
         },
       ],
       footnote: [],
@@ -474,7 +513,13 @@ export const translations: ITranslations = {
       title: { en: "Exploring Variables And Data Types", bn: "" },
       coverImg: "",
       texts: [],
-      topics: [],
+      topics: [
+        "Identifiers",
+        "Variables",
+        "Data types",
+        "Datatype Conversion",
+        "Conversion",
+      ],
       comingSoon: true,
       footnote: [],
     },
