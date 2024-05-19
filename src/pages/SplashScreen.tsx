@@ -1,7 +1,6 @@
 import { useAppStore } from "../store";
 import { translations as lang } from "../lang";
 import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
 
 export default function SplashScreen() {
   const selectedLang = useAppStore((state) => state.selectedLang);

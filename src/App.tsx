@@ -1,8 +1,5 @@
 import "./styles/splash.scss";
 import SplashScreen from "./pages/SplashScreen";
-import { useEffect } from "react";
-import { translations } from "./lang";
-import { slugify } from "./lib/utils";
 
 function App() {
   // useEffect(() => {

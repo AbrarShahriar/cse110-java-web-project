@@ -1,10 +1,9 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import styles from "./RoadmapPage.module.scss";
-import { translations as lang, translations } from "../lang";
+import { translations as lang } from "../lang";
 import { useAppStore } from "../store";
 import headerWave from "../assets/images/roadmap-wave.svg";
 import Roadmap from "../components/Roadmap";
-import { slugify } from "../lib/utils";
 import { useNavigate } from "react-router-dom";
 
 export default function RoadmapPage() {
