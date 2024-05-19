@@ -8,9 +8,6 @@ import LessonPage from "./pages/LessonPage.tsx";
 import AboutPage from "./pages/AboutPage.tsx";
 import { translations } from "./lang.ts";
 import { slugify } from "./lib/utils.ts";
-import ReactGA from "react-ga4";
-
-ReactGA.initialize(import.meta.env.TRACKER_ID);
 
 if (!localStorage.getItem("sections")) {
   console.log("LS item not found: creating LS item");

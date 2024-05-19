@@ -2,7 +2,10 @@ import { useAppStore } from "../store";
 import { translations as lang } from "../lang";
 import { useNavigate } from "react-router-dom";
 
+import ReactGA from "react-ga4";
+
 export default function SplashScreen() {
+  ReactGA.initialize("G-0NP7RD2JL8");
   const selectedLang = useAppStore((state) => state.selectedLang);
   const navigate = useNavigate();
 
