@@ -30,7 +30,7 @@ export const translations: ITranslations = {
         "https://images.unsplash.com/photo-1607799279861-4dd421887fb3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       title: {
         en: "Introduction To Logical Programming & Flow Management",
-        bn: "",
+        bn: "লজিকাল প্রোগ্রামিং এবং ফ্লো ম্যানেজমেন্ট",
       },
       topics: ["Program", "Logic", "Flow Control", "Flow Chart"],
       texts: [
