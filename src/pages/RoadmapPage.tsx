@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import styles from "./RoadmapPage.module.scss";
-import { TLang, translations as lang } from "../lang";
+import { translations as lang } from "../lang";
 import { useAppStore } from "../store";
 import headerWave from "../assets/images/roadmap-wave.svg";
 import Roadmap from "../components/Roadmap";
