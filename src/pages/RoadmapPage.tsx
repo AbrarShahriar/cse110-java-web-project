@@ -39,7 +39,7 @@ export default function RoadmapPage() {
             navigate("/about");
           }}
         >
-          About Us
+          {lang.aboutUsTitle[selectedLang]}
         </button>
         <h1>{lang.roadmap_headerTitle[selectedLang]}</h1>
         <div
