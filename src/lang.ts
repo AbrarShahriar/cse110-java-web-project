@@ -1,4 +1,4 @@
-type TLang = {
+export type TLang = {
   en: string;
   bn: string;
 };

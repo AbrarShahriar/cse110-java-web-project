@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import styles from "./RoadmapPage.module.scss";
-import { translations as lang } from "../lang";
+import { TLang, translations as lang } from "../lang";
 import { useAppStore } from "../store";
 import headerWave from "../assets/images/roadmap-wave.svg";
 import Roadmap from "../components/Roadmap";
@@ -8,8 +8,10 @@ import { useNavigate } from "react-router-dom";
 import ReactGA from "react-ga4";
 
 export default function RoadmapPage() {
-  const language = useAppStore((state) => state.selectedLang);
-  const [langSwitch, setLangSwitch] = useState(false);
+  const selectedLang = useAppStore((state) => state.selectedLang);
+  const [langSwitch, setLangSwitch] = useState(selectedLang !== "en");
+
+  const setLang = useAppStore((state) => state.setLang);
 
   const navigate = useNavigate();
 
@@ -39,7 +41,7 @@ export default function RoadmapPage() {
         >
           About Us
         </button>
-        <h1>{lang.roadmap_headerTitle[language]}</h1>
+        <h1>{lang.roadmap_headerTitle[selectedLang]}</h1>
         <div
           className={styles.langSwitch}
           onClick={() => {
@@ -49,6 +51,11 @@ export default function RoadmapPage() {
               label: `Language Switched`,
             });
             setLangSwitch(!langSwitch);
+            if (selectedLang == "en") {
+              setLang("bn");
+            } else {
+              setLang("en");
+            }
           }}
         >
           <span>EN</span>
