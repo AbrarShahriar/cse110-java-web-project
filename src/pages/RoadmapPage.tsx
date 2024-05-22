@@ -14,6 +14,8 @@ export default function RoadmapPage() {
   const navigate = useNavigate();
 
   useEffect(() => {
+    console.log("Roadmap");
+
     ReactGA.send({
       hitType: "pageview",
       page: "/roadmap",

@@ -17,12 +17,14 @@ interface ITranslations {
   hero_getMeThere: TLang;
   roadmap_headerTitle: TLang;
   roadmapData: IRoadmapData[];
+  aboutUsTitle: TLang;
 }
 
 export const translations: ITranslations = {
   hero_title: { en: "Learn Java for CSE-110", bn: "" },
   hero_getMeThere: { en: "Get Me There...", bn: "" },
   roadmap_headerTitle: { en: "The Legendary Roadmap", bn: "" },
+  aboutUsTitle: { en: "About Us", bn: "" },
   roadmapData: [
     {
       comingSoon: false,
@@ -512,7 +514,685 @@ export const translations: ITranslations = {
     {
       title: { en: "Exploring Variables And Data Types", bn: "" },
       coverImg: "",
-      texts: [],
+      texts: [
+        {
+          bn: "",
+          en: `<h1 style="text-align: center; font-family: 'Block Berthold', sans-serif;">Identifiers
+      </h1>
+      
+      <div style="text-align: center;">
+          <img src="https://i.postimg.cc/zGSt8mk6/4-drawio.png
+      " alt="Untitled Diagram" style="border-radius: 20px; border: 2px solid black; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);">
+      </div>
+      
+      
+      <ul>
+          <li>A name given to a specific entity in a program.</li>
+          <li>It can be a variable name, method name, class name, structure name, etc.</li>
+      </ul>`,
+        },
+        {
+          bn: "",
+          en: `<div>
+          <style>
+       h1 {
+           text-align: center;
+           font-family:'Block Berthold',sans-serif;
+       }
+ .test {
+         display: flex; 
+         align-items: center; 
+         justify-content: center;
+       }
+       .test2 {
+           flex: 1; margin-right: auto;
+       }
+       .flex_one{
+         flex: 1;
+       } 
+           @media only screen and (max-width: 600px) {
+               .test {
+                   flex-direction: column;
+           }
+       }
+ </style>
+ <h1>   Variables in Programming
+           </h1>
+           <div style="text-align: center;">
+               <img src="https://i.postimg.cc/zB5q31mh/196232fe-f00d-4314-afd6-0a33137bc38d.jpg
+ 
+           " alt="Untitled Diagram" style="border-radius: 20px; border: 2px solid black; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); height:100px width:200px">
+           </div>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <div class='test' >
+               <div class="test2">
+                   <h1>Here Are Some Points to Identify Variables</h1>
+                    <div class="flex_one">
+      <ul>
+                  <li>A variable is a container used to store data.</li>
+                  <li>A type of identifier.</li>
+                  <li>Each variable has a specific data type.</li>
+                  </ul>
+     </div>
+               </div>
+               <div class="flex_one">
+                   <div style="flex: 1;">
+         <img src="https://i.postimg.cc/vBWDSzyr/var1-drawio.png
+ " style="border-radius: 10px;">
+     </div>
+               </div>
+           </div>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <div class='test'>
+               <div class="flex_one">
+                   <h1>Variables Continued</h1>
+                  <p><strong>Declaration:</strong> Allocating memory space and specifying the datatype of a variable.</p>
+                  <p><strong>Assignment:</strong> Giving a value to a variable.</p>
+                  <p><strong>Initialization:</strong> Allocating memory space, specifying the data type, and assigning a value.</p>
+               </div>
+               <div class="flex_one">
+                   <pre><code class="language-Java"> 
+ int a;  	//declaration
+ a= 5;   	//assignment
+ int a = 5; //initialization
+ 
+  </code>
+  </pre>
+               </div>
+           </div>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <div class='test'>
+               <div class="flex_one">
+                   <h1>Variables Initialization</h1>
+                   <p><strong>Here is the syntax:</strong> 
+                   < datatype >  < variable_name > = < value > < format_specifiers >
+ </p>
+   <p>
+   [Format specifiers for double and float data types only]
+ 
+   </p>
+               </div>
+               <div class="flex_one">
+                     <pre><code class="language-Java"> 
+   int  number = 12;
+   char var = ‘A’;
+   double value = 5.45d;
+ 
+  </code>
+  </pre>
+               </div>
+           </div>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <div class='test'>
+               <div class="flex_one">
+                   <h1>Naming Conventions of Variables</h1>
+                  <ul>
+                  <li>Must start with letters (A-Z, a-z), dollar sign ($), or underscore (_).   
+      </li>
+                  <li>It can not start with numbers or special characters.</li>
+                  <li>Can contain numbers except at the beginning (0-9).
+         <strong>Example:</strong> int num1 = 10;</li>
+               </div>
+               <div class="flex_one">
+                    <pre><code class="language-Java"> 
+ int number = 60;
+ int num1 = 20;
+ /* 
+ 
+ variable declaration below are wrong
+  (don't try it at home)
+ 
+  */
+ 
+ int %name = 23; 
+ int 2name = 33;
+ 
+ 
+  </code>
+  </pre>
+               </div>
+           </div>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <div class='test'>
+               <div style="flex: 1;">
+                   <h1 style="font-family: 'Block Berthold', sans-serif;">Variable Naming Conventions Continued</h1>
+                   <p>Java Keywords are special reserved words with predefined meanings that cannot be used as variable names. Let's learn about a few of them.</p>
+                   <ul>
+                   <li>
+ <strong>Case-sensitive:</strong>
+ Num1 and num1 are not the same.</li>
+                   <li>Cannot contain white spaces. </li>
+                   <li>You can use camel casing (studentName) or snake casing (student_id) for multiple words in a variable.</li>
+                   </ul>
+               </div>
+               <div class="flex_one">
+                    <pre><code class="language-Java"> 
+ int number_given = 45; //correct
+ int numberGiven = 46; //correct
+ int number given = 47 // incorrect
+ 
+ 
+  </code>
+  </pre>
+               </div>
+           </div>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <div class='test'>
+               <div style="flex: 1;">
+                   <h1>Variable Naming Conventions Continued Part 2</h1>
+                    <ul>
+                   <li>
+                     It should be meaningful</li>
+                   <li>You should always avoid single single character variable names.</li>
+                   <li>Variable names must not include a Java reserved keyword.</li>
+                   <li>Keywords generally start with lowercase letters.</li>
+                   </ul>
+               </div>
+               <div class="flex_one"> 
+                   <pre><code class="language-Java"> 
+ List of reserved keywords in java
+
+ 
+|------------|-----------|--------------|------------|-----------|
+| abstract   | assert    | boolean      | break      | byte      |
+| case       | catch     | char         | class      | const*    |
+| continue   | default   | do           | double     | else      |
+| enum       | extends   | final        | finally    | float     |
+| for        | goto*     | if           | implements | import    |
+| instanceof | int       | interface    | long       | native    |
+| new        | null      | package      | private    | protected |
+| public     | return    | short        | static     | strictfp  |
+| super      | switch    | synchronized | this       | throw     |
+| throws     | transient | try          | void       | volatile  |
+| while      |           |              |            |           |
+
+  </code>
+  </pre>
+               </div>
+           </div>
+ </div>`,
+        },
+        {
+          bn: "",
+          en: `<div>
+          <style>
+       h1 {
+           text-align: center;
+           font-family:'Block Berthold',sans-serif;
+       }
+ .test {
+         display: flex; 
+         align-items: center; 
+         justify-content: center;
+       }
+       .test2 {
+           flex: 1; margin-right: auto;
+       }
+       .flex_one{
+         flex: 1;
+       } 
+           @media only screen and (max-width: 600px) {
+               .test {
+                   flex-direction: column;
+           }
+       }
+ </style>
+ <h1>   Data types in Programming
+           </h1>
+           <div style="text-align: center;">
+               <img src="https://i.postimg.cc/PqJtCjFC/99564f6d-1681-470f-b57a-7f29441efc54.jpg
+ 
+           " alt="Untitled Diagram" style="border-radius: 20px; border: 2px solid black; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); height:100px width:200px">
+           </div>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <div class='test' >
+               <div class="test2">
+                   <h1>Here Are Some Information Regarding Data Types</h1>
+                    <div class="flex_one">
+                   <h3>In Java, variables require a data type to be assigned.There are major two types of data in Java:</h3>
+      <ol>
+                  <li><strong>Primitive Data Types:</strong> Hold a value and specify the size and type of a variable.</li>
+                  <li><strong>Non-Primitive Data Types:</strong> Hold a reference to an object or location.</li>
+                  </ol>
+     </div>
+               </div>
+               <div class="flex_one">
+                   <div style="flex: 1;">
+         <img src="https://i.postimg.cc/7Z6mmDhN/datatype-drawio.png
+ " style="border-radius: 10px;">
+     </div>
+               </div>
+           </div>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <div class='test'>
+               <div class="flex_one">
+                   <h1>Here are some more examples:</h1>
+               </div>
+               <div class="flex_one">
+             <img src="https://i.postimg.cc/yxNWZf6v/types-Data-drawio.png
+ " style="border-radius: 10px;">
+               </div>
+           </div>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <div class='test'>
+               <div class="flex_one">
+                   <h1>Continued Example of primitive data types:</h1>
+                   <p>More example of <strong>primitive data types:</strong> </p>
+               </div>
+               <div class="flex_one">
+                     <pre><code class="language-Java"> 
+ short short1 = 3000;
+ long var = 2351678;
+ byte value = 20;
+ int a = 10;
+ float b = 1.56f;                // f specifies float value
+ double d1 = 12.6543d;   // d specifies double value
+ char ch = ‘a’;                  // Enclosed by single quotation
+ boolean answer = true;
+ 
+  </code>
+  </pre>
+               </div>
+           </div>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <div class='test'>
+               <div class="flex_one">
+                   <h1>Some example of non-primitive data types</h1>
+                  <ul>
+                  <li><strong>String</strong> A collection of characters enclosed in quotation marks. 
+      </li>
+                 <li><strong>Arrays</strong>A collection of a fixed number of values of the same data type.
+      </li>
+                  <li><strong>Class:</strong> A blueprint for creating objects.
+      </li>
+               </div>
+               <div class="flex_one">
+                    <pre><code class="language-Java"> 
+        String mine_string = “Hello Classmates”;
+        int [ ] array1 = {1, 2, -11, 6};
+ 
+ 
+ 
+  </code>
+  </pre>
+               </div>
+           </div>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <div class='test'>
+               <div style="flex: 1;">
+                   <h1 style="font-family: 'Block Berthold', sans-serif;">Watch Out !!!</h1>
+                   <ul>
+                   <li>
+ Values of the char data type are enclosed in single quotation marks (' ').</li>
+                   <li>But values of the String data type are enclosed in double quotation marks (" ").</li>
+                   </ul>
+               </div>
+               <div class="flex_one">
+                    <pre><code class="language-Java"> 
+ char ch = ‘a’;                     // Enclosed by single quotation
+ String my_string = “Hello World”;  // Enclosed by double quotation
+ 
+ 
+  </code>
+  </pre>
+               </div>
+           </div>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+          
+ </div>`,
+        },
+        {
+          bn: "",
+          en: `<div>
+          <style>
+       h1 {
+           text-align: center;
+           font-family:'Block Berthold',sans-serif;
+       }
+ .test {
+         display: flex; 
+         align-items: center; 
+         justify-content: center;
+       }
+       .test2 {
+           flex: 1; margin-right: auto;
+       }
+       .flex_one{
+         flex: 1;
+       } 
+           @media only screen and (max-width: 600px) {
+               .test {
+                   flex-direction: column;
+           }
+       }
+ </style>
+ <h1>   Type Casting / Datatype Conversion
+           </h1>
+           <div style="text-align: center;">
+               <img src="https://i.postimg.cc/bvGr56FM/type-Casting-drawio.png
+ 
+           " alt="Untitled Diagram" style="border-radius: 20px; border: 2px solid black; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); height:100px width:200px">
+           </div>
+           <h3>
+           <ul>
+           <li>Casting is the process of changing an entity's data type to another. Type casting involves converting a value from one data type to another.</li>
+           <li>Casting only changes the data type, not the data itself.</li>
+           <li>There Are two types of casting
+                   <ul>
+                     <li>Implicit Casting\Widening
+                     </li>
+                     <li>Explicit Casting\Narrowing
+                     </li>
+                   </ul>
+                   </li>
+                   </ul>
+           </ul>
+           
+ </h3>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <div class='test' >
+               <div class="test2">
+                   <h1>Implicit Casting / Widening</h1>
+                    <div class="flex_one">
+                   <h3>In Java, variables require a data type to be assigned.There are major two types of data in Java:</h3>
+      <ul>
+                  <li>Casting only changes the data type, not the data itself.</li>
+                  <li>No data is lost.</li>
+                  <li>Java performs this casting automatically, without needing explicit code.</li>
+                  </ul>
+     </div>
+               </div>
+               <div class="flex_one">
+                   <div style="flex: 1;">
+           <pre><code class="language-Java"> 
+ int number = 20;
+ double data = number;
+ 
+  </code>
+  </pre>
+     </div>
+               </div>
+           </div>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <div class='test'>
+               <div class="flex_one">
+                   <h1>Explicit Casting/Narrowing</h1>
+                   <ul>
+                   <li>Converting higher data types to lower data types.</li>
+                   <li>When larger-size data types are converted into smaller ones, data loss may occur. </li>
+                   </ul>
+               </div>
+               <div class="flex_one">
+              <pre><code class="language-Java"> 
+ double num = 20.89;
+ int data = (int)num;
+ 
+ 
+  </code>
+  </pre>
+               </div>
+           </div>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <div class='test'>
+               <div class="flex_one">
+                   <h1>Continued Example of primitive data types:</h1>
+                   <p>More example of <strong>primitive data types:</strong> </p>
+               </div>
+               <div class="flex_one">
+                     <pre><code class="language-Java"> 
+ short short1 = 3000;
+ long var = 2351678;
+ byte value = 20;
+ int a = 10;
+ float b = 1.56f;                // f specifies float value
+ double d1 = 12.6543d;   // d specifies double value
+ char ch = ‘a’;                  // Enclosed by single quotation
+ boolean answer = true;
+ 
+  </code>
+  </pre>
+               </div>
+           </div>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <div class='test'>
+               <div class="flex_one">
+                   <h1>Some example of non-primitive data types</h1>
+                  <ul>
+                  <li><strong>String</strong> A collection of characters enclosed in quotation marks. 
+      </li>
+                 <li><strong>Arrays</strong>A collection of a fixed number of values of the same data type.
+      </li>
+                  <li><strong>Class:</strong> A blueprint for creating objects.
+      </li>
+               </div>
+               <div class="flex_one">
+                    <pre><code class="language-Java"> 
+        String mine_string = “Hello Classmates”;
+        int [ ] array1 = {1, 2, -11, 6};
+ 
+ 
+ 
+  </code>
+  </pre>
+               </div>
+           </div>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <div class='test'>
+               <div style="flex: 1;">
+                   <h1 style="font-family: 'Block Berthold', sans-serif;">Watch Out !!!</h1>
+                   <ul>
+                   <li>
+ Values of the char data type are enclosed in single quotation marks (' ').</li>
+                   <li>But values of the String data type are enclosed in double quotation marks (" ").</li>
+                   </ul>
+               </div>
+               <div class="flex_one">
+                    <pre><code class="language-Java"> 
+ char ch = ‘a’;                     // Enclosed by single quotation
+ String my_string = “Hello World”;  // Enclosed by double quotation
+ 
+ 
+  </code>
+  </pre>
+               </div>
+           </div>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+          
+ </div>`,
+        },
+        {
+          bn: "",
+          en: `<div>
+          <style>
+       h1 {
+           text-align: center;
+           font-family:'Block Berthold',sans-serif;
+       }
+ .test {
+         display: flex; 
+         align-items: center; 
+         justify-content: center;
+       }
+       .test2 {
+           flex: 1; margin-right: auto;
+       }
+       .flex_one{
+         flex: 1;
+       } 
+           @media only screen and (max-width: 600px) {
+               .test {
+                   flex-direction: column;
+           }
+       }
+ </style>
+ <h1>   Numeric to Numeric Conversion
+           </h1>
+           <div style="text-align: center;">
+               <img src="https://i.postimg.cc/JzZZ1b6h/8083fb51-cd19-4fdd-a024-c8e8c158d4c5.jpg
+ 
+           " alt="Untitled Diagram" style="border-radius: 20px; border: 2px solid black; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); height:100px width:200px">
+           </div>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <div class='test' >
+               <div class="test2">
+                   <h1>Int to float / Double :</h1>
+                    <div class="flex_one">
+                  </ul>
+     </div>
+               </div>
+               <div class="flex_one">
+                   <div style="flex: 1;">
+           <pre><code class="language-Java"> 
+ int num = 20;
+ double data2 = num; //20.0
+ float data3= num; //20.0
+ 
+ 
+  </code>
+  </pre>
+     </div>
+               </div>
+           </div>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <div class='test'>
+               <div class="flex_one">
+                   <h1>Double and float to int :</h1>
+               </div>
+               <div class="flex_one">
+              <pre><code class="language-Java"> 
+                  
+ double num2 = 10.99d;
+ float num3 = 10.25f;
+ int data2 = (int)num2; //10
+ int data3= (int)num3 //10
+ 
+ 
+  </code>
+  </pre>
+               </div>
+           </div>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <div class='test'>
+               <div class="flex_one">
+                   <h1>Numeric to Non-Numeric Conversion (integer to String)</h1>
+               </div>
+               <div class="flex_one">
+                     <pre><code class="language-Java"> 
+ String x = String.valueOf(15);
+ String y = Integer.toString(20);
+ System.out.println(x + y); //1520
+ 
+ 
+  </code>
+  </pre>
+               </div>
+           </div>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <div class='test'>
+               <div class="flex_one">
+                   <h1>Numeric to Non-Numeric Conversion (String to integer)</h1>
+               </div>
+               <div class="flex_one">
+                    <pre><code class="language-Java"> 
+ int n = Integer.parseInt("25");
+ int m = Integer.valueOf("35");
+ System.out.println(m + n); //60
+ 
+ 
+ 
+  </code>
+  </pre>
+               </div>
+           </div>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <div class='test'>
+               <div class="flex_one">
+                   <h1>Numeric to Non-Numeric Conversion (integer to char)</h1>
+               </div>
+               <div class="flex_one">
+                    <pre><code class="language-Java"> 
+ int a = 65;    
+ char c = (char) a;    
+ System.out.println(c);  // Output: A
+ 
+ 
+ 
+  </code>
+  </pre>
+               </div>
+           </div>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <div class='test'>
+               <div class="flex_one">
+                   <h1>Numeric to Non-Numeric Conversion (char to integer)</h1>
+               </div>
+               <div class="flex_one">
+                    <pre><code class="language-Java"> 
+ char a = 'Z';    
+ int c = (int) a;    
+ System.out.println(c);  // Output: 90
+ 
+ 
+ 
+ 
+  </code>
+  </pre>
+  <h2><a href="https://www.cs.cmu.edu/~pattis/15-1XX/common/handouts/ascii.html
+ 
+ ">ASCII Table</a>
+ </h2>
+               </div>
+           </div>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>`,
+        },
+      ],
       topics: [
         "Identifiers",
         "Variables",
@@ -520,7 +1200,7 @@ export const translations: ITranslations = {
         "Datatype Conversion",
         "Conversion",
       ],
-      comingSoon: true,
+      comingSoon: false,
       footnote: [],
     },
     {
