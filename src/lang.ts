@@ -22,7 +22,7 @@ interface ITranslations {
 export const translations: ITranslations = {
   hero_title: { en: "Learn Java for CSE-110", bn: "" },
   hero_getMeThere: { en: "Get Me There...", bn: "" },
-  roadmap_headerTitle: { en: "The Legendary Roadmap", bn: "" },
+  roadmap_headerTitle: { en: "The Legendary Roadmap", bn: "কিংবদন্তি রোডম্যাপ" },
   roadmapData: [
     {
       comingSoon: false,
