@@ -11,8 +11,6 @@ export default function AboutPage() {
   const lang = useAppStore((state) => state.selectedLang);
 
   useEffect(() => {
-    console.log("About");
-
     ReactGA.send({
       hitType: "pageview",
       page: `/about`,

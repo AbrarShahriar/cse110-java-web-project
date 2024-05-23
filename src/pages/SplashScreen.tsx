@@ -9,8 +9,6 @@ export default function SplashScreen() {
   ReactGA.initialize("G-0NP7RD2JL8");
 
   useEffect(() => {
-    console.log("Splash");
-
     ReactGA.send({
       hitType: "pageview",
       page: "/",

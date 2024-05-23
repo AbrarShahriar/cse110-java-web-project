@@ -80,8 +80,6 @@ export default function LessonPage() {
   const [confettiActive, setConfettiActive] = useState(false);
 
   useEffect(() => {
-    console.log(`Lessons: ${topicData.title.en}`);
-
     ReactGA.send({
       hitType: "pageview",
       page: `/lessons/${lessionId}`,
