@@ -32,3 +32,21 @@ a {
   color: blue;
   background-color: black;
 }
+
+pre,
+code {
+  max-width: 100%;
+}
+.hljs {
+  display: inline-block;
+  white-space: pre-wrap;
+  padding: 0.5em;
+  color: #333;
+  background: #f8f8f8;
+}
+
+@media only screen and (max-width: 600px) {
+  .hljs {
+    margin: 20px 0;
+  }
+}

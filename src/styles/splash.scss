@@ -117,7 +117,7 @@ body {
     opacity: 1;
     will-change: opacity;
     @include animation(
-      "logo .3s ease-in 1.5s forwards, off .6s ease-in-out 3.2s forwards"
+      "logo .3s ease-in 1s forwards, off .6s ease-in-out 3.2s forwards"
     );
     &:before {
       display: block;

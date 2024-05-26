@@ -1,8 +1,9 @@
 @import "../styles/global/colors.scss";
 @import "../styles/fonts/load_fonts.scss";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 .about {
-  font-family: "Block Berthold Condensed";
+  font-family: "Montserrat", sans-serif;
   position: relative;
   background-color: $primary;
   width: 100%;
@@ -23,10 +24,10 @@
     color: white;
     text-align: center;
     padding-top: 20px;
-    font-size: 22px;
+    font-size: 24px;
 
     h1 {
-      letter-spacing: 4px;
+      // letter-spacing: 4px;
     }
 
     @media only screen and (max-width: 600px) {
@@ -75,12 +76,12 @@
 
       h1 {
         font-weight: 400;
-        letter-spacing: 2px;
+        // letter-spacing: 2px;
         text-align: center;
       }
 
       p {
-        letter-spacing: 2px;
+        // letter-spacing: 2px;
         @media only screen and (max-width: 600px) {
           & {
             width: 70%;
@@ -108,7 +109,11 @@
     text-align: center;
     margin-top: 40px;
     font-size: 22px;
-    letter-spacing: 2px;
+    // letter-spacing: 2px;
     font-weight: 400;
+
+    span {
+      font-weight: bold;
+    }
   }
 }

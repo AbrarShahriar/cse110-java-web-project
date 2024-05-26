@@ -85,7 +85,10 @@ export default function AboutPage() {
       </div>
 
       <div className={styles.contact}>
-        <p>Contact Us at : summerelitecoders@gmail.com</p>
+        <p>
+          <span>Contact Us: </span>
+          summerelitecoders@gmail.com
+        </p>
       </div>
     </div>
   );

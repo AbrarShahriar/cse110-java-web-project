@@ -157,7 +157,12 @@ export default function LessonPage() {
       <div className={styles.topicCard}>
         {subSectionNumber == 0 && (
           <>
-            <h2 className={styles.title}>{topicData?.title[lang]}</h2>
+            {![
+              "Intro To Java Lang",
+              "Exploring Variables And Data Types",
+            ].includes(topicData.title[lang]) && (
+              <h2 className={styles.title}>{topicData?.title[lang]}</h2>
+            )}
             {topicData?.coverImg && (
               <img src={topicData?.coverImg} alt={topicData?.title[lang]} />
             )}
